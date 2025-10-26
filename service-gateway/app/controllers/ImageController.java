@@ -38,22 +38,8 @@ public class ImageController extends HomeController {
             description = "Upload an image and invert its colors using Akka actors for parallel processing. " +
                     "Color transformation: Red->Green, Green->Blue, Blue->Red"
     )
-    @ApiResponses(value = {
-            @io.swagger.v3.oas.annotations.responses.ApiResponse(
-                    responseCode = "200",
-                    description = "Image processed successfully",
-                    content = @Content(schema = @Schema(implementation = ImageResponse.class))
-            ),
-            @io.swagger.v3.oas.annotations.responses.ApiResponse(
-                    responseCode = "400",
-                    description = "Invalid image format or missing file"
-            ),
-            @io.swagger.v3.oas.annotations.responses.ApiResponse(
-                    responseCode = "500",
-                    description = "Internal server error during processing"
-            )
-    })
-    public CompletionStage<Result> uploadImage(Http.Request request) {
+    public CompletionStage<Result> uploadImage() {
+        Http.Request request = request();
         Http.MultipartFormData<File> body = request.body().asMultipartFormData();
 
         if (body == null) {
