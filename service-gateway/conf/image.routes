@@ -1,2 +1,2 @@
 POST    /api/image/upload               @controllers.ImageController.uploadImage()
-GET     /api/image/:filename            @controllers.ImageController.getImage()
+GET     /api/image/:filename            @controllers.ImageController.getImage(filename: String)
