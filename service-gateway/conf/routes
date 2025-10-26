@@ -18,4 +18,4 @@ GET            /error                                                          c
 GET            /error/                                                         controllers.HomeController.error()
 GET            /api-docs                                                       controllers.HomeController.api()
 
-->             /                                                               library.Routes
+->             /                                                               image.Routes
