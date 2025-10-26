@@ -1,6 +1,7 @@
 package controllers;
 
 import com.app.IImageService;
+import com.app.model.ImageResponse;
 import play.mvc.Controller;
 
 
