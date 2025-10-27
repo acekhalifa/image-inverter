@@ -163,6 +163,13 @@
         </repository>
     </repositories>
 
+    <pluginRepositories>
+        <pluginRepository>
+            <id>play2-maven-plugin-repo</id>
+            <url>https://raw.github.com/play2-maven-plugin/play2-maven-plugin/master/repository/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
     <modules>
         <module>service-gateway</module>
         <module>entities</module>
